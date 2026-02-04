@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search - Fetch Google</title>
+    <style>
+        body { font-family: Arial, sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; margin: 0; background-color: #ffffff; }
+        .logo { font-size: 72px; font-weight: bold; margin-bottom: 30px; }
+        .logo span:nth-child(1) { color: #4285F4; } /* G */
+        .logo span:nth-child(2) { color: #EA4335; } /* o */
+        .logo span:nth-child(3) { color: #FBBC05; } /* o */
+        .logo span:nth-child(4) { color: #4285F4; } /* g */
+        .logo span:nth-child(5) { color: #34A853; } /* l */
+        .logo span:nth-child(6) { color: #EA4335; } /* e */
+        
+        .search-box { width: 100%; max-width: 580px; position: relative; }
+        input[type="text"] { width: 100%; padding: 15px 25px; border: 1px solid #dfe1e5; border-radius: 30px; font-size: 16px; outline: none; box-shadow: none; transition: box-shadow 0.2s; box-sizing: border-box; }
+        input[type="text"]:hover, input[type="text"]:focus { box-shadow: 0 1px 6px rgba(32,33,36,0.28); border-color: rgba(223,225,229,0); }
+        
+        .btn-container { margin-top: 25px; }
+        button { background-color: #f8f9fa; border: 1px solid #f8f9fa; border-radius: 4px; color: #3c4043; font-size: 14px; margin: 11px 4px; padding: 10px 20px; cursor: pointer; }
+        button:hover { border: 1px solid #dadce0; box-shadow: 0 1px 1px rgba(0,0,0,0.1); color: #202124; }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <span>F</span><span>e</span><span>t</span><span>c</span><span>h</span>
+    </div>
+    
+    <div class="search-box">
+        <form action="RedirectServlet" method="GET">
+            <input type="text" name="query" placeholder="Type what you want to find..." required>
+            <div class="btn-container">
+                <button type="submit">Fetch</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
