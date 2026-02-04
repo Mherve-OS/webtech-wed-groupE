@@ -1,5 +1,7 @@
 # My Portfolio
 
+![My Photo](me.JPG)
+
 Welcome to my portfolio! This project showcases my web development work and skills.
 
 ## About Me
