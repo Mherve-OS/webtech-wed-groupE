@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Management Specialist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { background-color: #0f172a; color: #f8fafc; font-family: 'Inter', sans-serif; }
+        .glass { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); }
+        .gradient-text { background: linear-gradient(90deg, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    </style>
+</head>
+
+<body class="leading-relaxed tracking-wide">
+
+    <nav class="fixed w-full z-50 p-6 glass flex justify-between items-center">
+        <div class="text-xl font-bold gradient-text">MUYOBOKE HERVE</div>
+        <div class="space-x-6 hidden md:block">
+            <a href="#about" class="hover:text-sky-400 transition">About</a>
+            <a href="#skills" class="hover:text-sky-400 transition">Skills</a>
+            <a href="#projects" class="hover:text-sky-400 transition">Projects</a>
+            <a href="#contact" class="px-4 py-2 bg-sky-600 rounded-lg hover:bg-sky-500 transition">Contact</a>
+        </div>
+    </nav>
+
+     <section class="min-h-screen flex flex-col justify-center items-center text-center px-4 pt-20">
+    <div class="relative mb-8">
+        <div class="absolute -inset-1 bg-gradient-to-r from-sky-400 to-indigo-500 rounded-full blur opacity-75"></div>
+        <img src="me.jpg" alt="Your Name" 
+             class="relative w-40 h-40 md:w-48 md:h-48 rounded-full object-cover border-4 border-slate-900 shadow-2xl">
+    </div>
+    <h2 class="text-gray-400 uppercase tracking-widest mb-4 font-mono text-sm">Information Management Specialist</h2>
+    <h1 class="text-5xl md:text-7xl font-extrabold mb-6">Securing Data. <br><span class="gradient-text">Managing Systems.</span></h1>
+    <p class="max-w-2xl text-gray-400 text-lg mb-8">
+        Professional Socialmedia Manager and IT Student at AUCA. Specializing in the bridge between
+        complex infrastructure and business data intelligence. 
+    </p>
+    <div class="flex gap-4">
+        <a href="#projects" class="bg-white text-black px-8 py-3 rounded-full font-bold hover:bg-sky-100 transition shadow-lg shadow-white/10">View My Work</a>
+        <a href="#contact" class="border border-gray-600 px-8 py-3 rounded-full font-bold hover:border-sky-400 transition">Get In Touch</a>
+    </div>
+</section>
+
+    <section id="skills" class="py-20 px-8 max-w-6xl mx-auto">
+        <h3 class="text-3xl font-bold mb-12 text-center">Core <span class="text-sky-400">Competencies</span></h3>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="glass p-8 rounded-2xl hover:scale-105 transition duration-300">
+                <i class="fas fa-server text-4xl text-sky-400 mb-6"></i>
+                <h4 class="text-xl font-bold mb-3">IT Infrastructure</h4>
+                <p class="text-gray-400 text-sm">Expertise in NAS configuration, IDS (Intrusion Detection Systems), VirtualBox environments, and hardware maintenance for HP EliteBook series.</p>
+            </div>
+            <div class="glass p-8 rounded-2xl hover:scale-105 transition duration-300">
+                <i class="fas fa-database text-4xl text-indigo-400 mb-6"></i>
+                <h4 class="text-xl font-bold mb-3">Information Management</h4>
+                <p class="text-gray-400 text-sm">Skilled in Accounting Information Systems, Database Management (SQL), and analyzing curriculum data for IT integration.</p>
+            </div>
+            <div class="glass p-8 rounded-2xl hover:scale-105 transition duration-300">
+                <i class="fas fa-chart-line text-4xl text-emerald-400 mb-6"></i>
+                <h4 class="text-xl font-bold mb-3">Digital Strategy</h4>
+                <p class="text-gray-400 text-sm">Professional Socialmedia Manager combined with music trend analysis, SEO, and short-form video content optimization.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-20 bg-slate-900/50 px-8">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="text-3xl font-bold mb-12">Featured <span class="text-sky-400">Projects</span></h3>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="group relative overflow-hidden rounded-2xl glass">
+                    <div class="p-8">
+                        <span class="text-xs text-sky-400 font-mono">NETWORKING & SECURITY</span>
+                        <h4 class="text-2xl font-bold mt-2">NAS & IDS Implementation</h4>
+                        <p class="text-gray-400 mt-4">Built a secure network-attached storage system within a virtualized environment, implementing intrusion detection to protect data integrity.</p>
+                        <div class="mt-6 flex gap-2">
+                            <span class="bg-slate-800 px-3 py-1 rounded text-xs">VirtualBox</span>
+                            <span class="bg-slate-800 px-3 py-1 rounded text-xs">Linux</span>
+                            <span class="bg-slate-800 px-3 py-1 rounded text-xs">Network Security</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-2xl glass">
+                    <div class="p-8">
+                        <span class="text-xs text-indigo-400 font-mono">DATA ANALYSIS</span>
+                        <h4 class="text-2xl font-bold mt-2">Information Asset Recovery</h4>
+                        <p class="text-gray-400 mt-4">Engineered a recovery and security framework for digital assets, specifically focusing on channel security and brand protection.</p>
+                        <div class="mt-6 flex gap-2">
+                            <span class="bg-slate-800 px-3 py-1 rounded text-xs">Security Auditing</span>
+                            <span class="bg-slate-800 px-3 py-1 rounded text-xs">Risk Mgmt</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 text-center px-4">
+        <h3 class="text-4xl font-extrabold mb-6">Ready to work <span class="gradient-text">together?</span></h3>
+        <p class="text-gray-400 mb-8">Currently open to IT internships and Information Management consultancy.</p>
+        <div class="flex justify-center space-x-8 text-2xl">
+            <a href="https://www.linkedin.com/in/herve-muyoboke-568936211/" class="hover:text-sky-400"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Mherve-OS" class="hover:text-sky-400"><i class="fab fa-github"></i></a>
+            <a href="#" class="hover:text-sky-400"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p class="mt-12 text-sm text-gray-600">© 2026 IT Portfolio | Information Management Department</p>
+    </section>
+
+</body>
+</html>
