@@ -92,6 +92,18 @@ GET /api/products/search?keyword={keyword} - Search products by keyword in
 name or description
 ![alt text](image-24.png)
 
+#  Question 5: Task Management API
+
+Create a TaskController with:
+
+GET /api/tasks - Get all tasks
+![alt text](image-25.png)
+
+# Bonus Question: User Profile API
+
+![alt text](image-26.png)
+
+
 
 
 
