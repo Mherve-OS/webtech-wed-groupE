@@ -1,0 +1,496 @@
+{
+	"info": {
+		"_postman_id": "restful-api-assignment",
+		"name": "Spring Boot RESTful API Assignment",
+		"description": "Complete collection for testing all REST API endpoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8081"
+		}
+	],
+	"item": [
+		{
+			"name": "Q1 - Library Books API",
+			"item": [
+				{
+					"name": "Get All Books",
+					"request": {
+						"method": "GET",
+						"url": "{{baseUrl}}/api/books"
+					}
+				},
+				{
+					"name": "Get Book by ID",
+					"request": {
+						"method": "GET",
+						"url": "{{baseUrl}}/api/books/1"
+					}
+				},
+				{
+					"name": "Search Books by Title",
+					"request": {
+						"method": "GET",
+						"url": "{{baseUrl}}/api/books/search?title=Clean"
+					}
+				},
+				{
+					"name": "Add New Book",
+					"request": {
+						"method": "POST",
+						"url": "{{baseUrl}}/api/books",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Spring Boot in Action\",\n    \"author\": \"Craig Walls\",\n    \"isbn\": \"978-1617292545\",\n    \"publicationYear\": 2016\n}"
+						}
+					}
+				},
+				{
+					"name": "Delete Book",
+					"request": {
+						"method": "DELETE",
+						"url": "{{baseUrl}}/api/books/1"
+					}
+				}
+			]
+		},
+		{
+			"name": "Q2 - Student Registration API",
+			"item": [
+				{
+					"name": "Get All Students",
+					"request": {
+						"method": "GET",
+						"url": "{{baseUrl}}/api/students"
+					}
+				},
+				{
+					"name": "Get Student by ID",
+					"request": {
+						"method": "GET",
+						"url": "{{baseUrl}}/api/students/1"
+					}
+				},
+				{
+					"name": "Get Students by Major (Computer Science)",
+					"request": {
+						"method": "GET",
+						"url": "{{baseUrl}}/api/students/major/Computer Science"
+					}
+				},
+				{
+					"name": "Filter Students by GPA >= 3.5",
+					"request": {
+						"method": "GET",
+						"url": "{{baseUrl}}/api/students/filter?gpa=3.5"
+					}
+				},
+				{
+					"name": "Register New Student",
+					"request": {
+						"method": "POST",
+						"url": "{{baseUrl}}/api/students",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"Frank\",\n    \"lastName\": \"Mugisha\",\n    \"email\": \"frank@auca.ac.rw\",\n    \"major\": \"Computer Science\",\n    \"gpa\": 3.7\n}"
+						}
+					}
+				},
+				{
+					"name": "Update Student",
+					"request": {
+						"method": "PUT",
+						"url": "{{baseUrl}}/api/students/1",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"Alice\",\n    \"lastName\": \"Johnson\",\n    \"email\": \"alice.updated@auca.ac.rw\",\n    \"major\": \"Computer Science\",\n    \"gpa\": 3.9\n}"
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Q3 - Restaurant Menu API",
+			"item": [
+				{
+					"name": "Get All Menu Items",
+					"request": {
+						"method": "GET",
+						"url": "{{baseUrl}}/api/menu"
+					}
+				},
+				{
+					"name": "Get Menu Item by ID",
+					"request": {
+						"method": "GET",
+						"url": "{{baseUrl}}/api/menu/1"
+					}
+				},
+				{
+					"name": "Get Items by Category (Dessert)",
+					"request": {
+						"method": "GET",
+						"url": "{{baseUrl}}/api/menu/category/Dessert"
+					}
+				},
+				{
+					"name": "Get Available Items",
+					"request": {
+						"method": "GET",
+						"url": "{{baseUrl}}/api/menu/available?available=true"
+					}
+				},
+				{
+					"name": "Search Menu by Name",
+					"request": {
+						"method": "GET",
+						"url": "{{baseUrl}}/api/menu/search?name=Cake"
+					}
+				},
+				{
+					"name": "Add New Menu Item",
+					"request": {
+						"method": "POST",
+						"url": "{{baseUrl}}/api/menu",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Grilled Chicken\",\n    \"description\": \"Marinated grilled chicken with herbs\",\n    \"price\": 16.99,\n    \"category\": \"Main Course\",\n    \"available\": true\n}"
+						}
+					}
+				},
+				{
+					"name": "Toggle Item Availability",
+					"request": {
+						"method": "PUT",
+						"url": "{{baseUrl}}/api/menu/5/availability"
+					}
+				},
+				{
+					"name": "Delete Menu Item",
+					"request": {
+						"method": "DELETE",
+						"url": "{{baseUrl}}/api/menu/1"
+					}
+				}
+			]
+		},
+		{
+			"name": "Q4 - E-Commerce Products API",
+			"item": [
+				{
+					"name": "Get All Products",
+					"request": {
+						"method": "GET",
+						"url": "{{baseUrl}}/api/products"
+					}
+				},
+				{
+					"name": "Get Products with Pagination",
+					"request": {
+						"method": "GET",
+						"url": "{{baseUrl}}/api/products?page=0&limit=5"
+					}
+				},
+				{
+					"name": "Get Product by ID",
+					"request": {
+						"method": "GET",
+						"url": "{{baseUrl}}/api/products/1"
+					}
+				},
+				{
+					"name": "Get Products by Category (Electronics)",
+					"request": {
+						"method": "GET",
+						"url": "{{baseUrl}}/api/products/category/Electronics"
+					}
+				},
+				{
+					"name": "Get Products by Brand (Apple)",
+					"request": {
+						"method": "GET",
+						"url": "{{baseUrl}}/api/products/brand/Apple"
+					}
+				},
+				{
+					"name": "Search Products by Keyword",
+					"request": {
+						"method": "GET",
+						"url": "{{baseUrl}}/api/products/search?keyword=phone"
+					}
+				},
+				{
+					"name": "Get Products in Price Range",
+					"request": {
+						"method": "GET",
+						"url": "{{baseUrl}}/api/products/price-range?min=50&max=200"
+					}
+				},
+				{
+					"name": "Get In-Stock Products",
+					"request": {
+						"method": "GET",
+						"url": "{{baseUrl}}/api/products/in-stock"
+					}
+				},
+				{
+					"name": "Add New Product",
+					"request": {
+						"method": "POST",
+						"url": "{{baseUrl}}/api/products",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"iPad Pro\",\n    \"description\": \"12.9-inch tablet with M2 chip\",\n    \"price\": 1099.99,\n    \"category\": \"Electronics\",\n    \"stockQuantity\": 25,\n    \"brand\": \"Apple\"\n}"
+						}
+					}
+				},
+				{
+					"name": "Update Product",
+					"request": {
+						"method": "PUT",
+						"url": "{{baseUrl}}/api/products/1",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"iPhone 15 Pro\",\n    \"description\": \"Latest Apple smartphone with A17 chip\",\n    \"price\": 1199.99,\n    \"category\": \"Electronics\",\n    \"stockQuantity\": 45,\n    \"brand\": \"Apple\"\n}"
+						}
+					}
+				},
+				{
+					"name": "Update Stock Quantity",
+					"request": {
+						"method": "PATCH",
+						"url": "{{baseUrl}}/api/products/1/stock?quantity=100"
+					}
+				},
+				{
+					"name": "Delete Product",
+					"request": {
+						"method": "DELETE",
+						"url": "{{baseUrl}}/api/products/1"
+					}
+				}
+			]
+		},
+		{
+			"name": "Q5 - Task Management API",
+			"item": [
+				{
+					"name": "Get All Tasks",
+					"request": {
+						"method": "GET",
+						"url": "{{baseUrl}}/api/tasks"
+					}
+				},
+				{
+					"name": "Get Task by ID",
+					"request": {
+						"method": "GET",
+						"url": "{{baseUrl}}/api/tasks/1"
+					}
+				},
+				{
+					"name": "Get Completed Tasks",
+					"request": {
+						"method": "GET",
+						"url": "{{baseUrl}}/api/tasks/status?completed=true"
+					}
+				},
+				{
+					"name": "Get Incomplete Tasks",
+					"request": {
+						"method": "GET",
+						"url": "{{baseUrl}}/api/tasks/status?completed=false"
+					}
+				},
+				{
+					"name": "Get Tasks by Priority (HIGH)",
+					"request": {
+						"method": "GET",
+						"url": "{{baseUrl}}/api/tasks/priority/HIGH"
+					}
+				},
+				{
+					"name": "Create New Task",
+					"request": {
+						"method": "POST",
+						"url": "{{baseUrl}}/api/tasks",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Submit Assignment\",\n    \"description\": \"Push code to Git and submit\",\n    \"completed\": false,\n    \"priority\": \"HIGH\",\n    \"dueDate\": \"2026-02-11\"\n}"
+						}
+					}
+				},
+				{
+					"name": "Update Task",
+					"request": {
+						"method": "PUT",
+						"url": "{{baseUrl}}/api/tasks/1",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Complete Spring Boot Assignment\",\n    \"description\": \"Finish all REST API questions - UPDATED\",\n    \"completed\": false,\n    \"priority\": \"HIGH\",\n    \"dueDate\": \"2026-02-12\"\n}"
+						}
+					}
+				},
+				{
+					"name": "Mark Task as Complete",
+					"request": {
+						"method": "PATCH",
+						"url": "{{baseUrl}}/api/tasks/1/complete"
+					}
+				},
+				{
+					"name": "Delete Task",
+					"request": {
+						"method": "DELETE",
+						"url": "{{baseUrl}}/api/tasks/1"
+					}
+				}
+			]
+		},
+		{
+			"name": "Bonus - User Profile API",
+			"item": [
+				{
+					"name": "Get All Users",
+					"request": {
+						"method": "GET",
+						"url": "{{baseUrl}}/api/users"
+					}
+				},
+				{
+					"name": "Get User by ID",
+					"request": {
+						"method": "GET",
+						"url": "{{baseUrl}}/api/users/1"
+					}
+				},
+				{
+					"name": "Search by Username",
+					"request": {
+						"method": "GET",
+						"url": "{{baseUrl}}/api/users/search/username?username=john"
+					}
+				},
+				{
+					"name": "Search by Country (Rwanda)",
+					"request": {
+						"method": "GET",
+						"url": "{{baseUrl}}/api/users/search/country/Rwanda"
+					}
+				},
+				{
+					"name": "Search by Age Range",
+					"request": {
+						"method": "GET",
+						"url": "{{baseUrl}}/api/users/search/age?min=20&max=30"
+					}
+				},
+				{
+					"name": "Create New User",
+					"request": {
+						"method": "POST",
+						"url": "{{baseUrl}}/api/users",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"new_user\",\n    \"email\": \"newuser@example.com\",\n    \"fullName\": \"New User\",\n    \"age\": 26,\n    \"country\": \"Rwanda\",\n    \"bio\": \"New AUCA student\",\n    \"active\": true\n}"
+						}
+					}
+				},
+				{
+					"name": "Update User Profile",
+					"request": {
+						"method": "PUT",
+						"url": "{{baseUrl}}/api/users/1",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"john_doe\",\n    \"email\": \"john.updated@example.com\",\n    \"fullName\": \"John Doe Updated\",\n    \"age\": 26,\n    \"country\": \"Rwanda\",\n    \"bio\": \"Senior Software Developer\",\n    \"active\": true\n}"
+						}
+					}
+				},
+				{
+					"name": "Activate User",
+					"request": {
+						"method": "PATCH",
+						"url": "{{baseUrl}}/api/users/4/activate"
+					}
+				},
+				{
+					"name": "Deactivate User",
+					"request": {
+						"method": "PATCH",
+						"url": "{{baseUrl}}/api/users/1/deactivate"
+					}
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"url": "{{baseUrl}}/api/users/1"
+					}
+				}
+			]
+		}
+	]
+}
