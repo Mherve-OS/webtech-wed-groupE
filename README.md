@@ -79,6 +79,19 @@ GET /api/products - Get all products (with optional pagination
 params: ?page={page}&limit={limit})
 ![alt text](image-20.png)
 
+GET /api/products/{productId} - Get product details
+![alt text](image-21.png)
+
+GET /api/products/category/{category} - Get products by category
+![alt text](image-22.png)
+
+GET /api/products/brand/{brand} - Get products by brand
+![alt text](image-23.png)
+
+GET /api/products/search?keyword={keyword} - Search products by keyword in
+name or description
+![alt text](image-24.png)
+
 
 
 
